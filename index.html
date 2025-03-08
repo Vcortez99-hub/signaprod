@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignaProd - Web Development & Digital Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    <span class="logo-text">SignaProd</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#work">Our Work</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Web Development & Digital Solutions</h1>
+                <p>We create cutting-edge websites, apps, and digital experiences that transform businesses and engage users.</p>
+                <a href="#contact" class="cta-button">Get a Free Quote</a>
+            </div>
+            <div class="hero-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                    <g fill="#40E0D0">
+                        <path d="M100 20c-44.1 0-80 35.9-80 80s35.9 80 80 80 80-35.9 80-80-35.9-80-80-80zm0 150c-38.6 0-70-31.4-70-70s31.4-70 70-70 70 31.4 70 70-31.4 70-70 70z"/>
+                        <path d="M100 40c-33.1 0-60 26.9-60 60s26.9 60 60 60 60-26.9 60-60-26.9-60-60-60zm0 110c-27.6 0-50-22.4-50-50s22.4-50 50-50 50 22.4 50 50-22.4 50-50 50z"/>
+                        <path d="M30 100H170M100 30V170"/>
+                        <path d="M41 60L159 140M41 140L159 60"/>
+                        <rect x="80" y="160" width="40" height="20" rx="5"/>
+                        <rect x="40" y="160" width="20" height="20" rx="5"/>
+                        <rect x="140" y="160" width="20" height="20" rx="5"/>
+                        <path d="M145 140 L150 130 L155 140 L150 145 Z"/>
+                        <path d="M50 45 L55 35 L60 45 L55 50 Z"/>
+                        <path d="M145 60 L150 50 L155 60 L150 65 Z"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive digital solutions for businesses of all sizes</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites built with the latest technologies. We create responsive, fast, and SEO-friendly sites that convert visitors into customers.</p>
+                    <ul class="service-features">
+                        <li>Custom WordPress Development</li>
+                        <li>E-commerce Solutions</li>
+                        <li>Progressive Web Apps</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.</p>
+                    <ul class="service-features">
+                        <li>iOS & Android Apps</li>
+                        <li>React Native Development</li>
+                        <li>Flutter Development</li>
+                        <li>App Store Optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered design approach that focuses on creating intuitive, engaging, and beautiful digital experiences.</p>
+                    <ul class="service-features">
+                        <li>User Research</li>
+                        <li>Wireframing & Prototyping</li>
+                        <li>Visual Design</li>
+                        <li>Usability Testing</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce Solutions</h3>
+                    <p>End-to-end e-commerce development with secure payment gateways, inventory management, and optimized checkout flows.</p>
+                    <ul class="service-features">
+                        <li>WooCommerce Development</li>
+                        <li>Shopify Development</li>
+                        <li>Custom E-commerce Solutions</li>
+                        <li>Payment Gateway Integration</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO & Digital Marketing</h3>
+                    <p>Data-driven strategies to improve your online visibility, drive qualified traffic, and increase conversions.</p>
+                    <ul class="service-features">
+                        <li>SEO Optimization</li>
+                        <li>Content Marketing</li>
+                        <li>Social Media Marketing</li>
+                        <li>Conversion Rate Optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Web Hosting & Maintenance</h3>
+                    <p>Reliable hosting solutions and ongoing maintenance services to keep your digital assets secure and up-to-date.</p>
+                    <ul class="service-features">
+                        <li>Managed WordPress Hosting</li>
+                        <li>Server Management</li>
+                        <li>Regular Updates & Backups</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="work" class="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Work</h2>
+                <p>Explore some of our recent projects</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image placeholder"></div>
+                    <div class="portfolio-overlay">
+                        <h3>E-commerce Website</h3>
+                        <p>Custom WooCommerce solution for a fashion retailer</p>
+                        <a href="#" class="view-project">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image placeholder"></div>
+                    <div class="portfolio-overlay">
+                        <h3>Mobile Banking App</h3>
+                        <p>Secure and user-friendly banking application</p>
+                        <a href="#" class="view-project">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image placeholder"></div>
+                    <div class="portfolio-overlay">
+                        <h3>Corporate Website</h3>
+                        <p>Modern website for a consulting firm</p>
+                        <a href="#" class="view-project">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image placeholder"></div>
+                    <div class="portfolio-overlay">
+                        <h3>Food Delivery App</h3>
+                        <p>Cross-platform app with real-time tracking</p>
+                        <a href="#" class="view-project">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Process</h2>
+                <p>How we bring your digital vision to life</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Discovery</h3>
+                        <p>We understand your business goals, target audience, and project requirements to create a solid foundation.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Planning</h3>
+                        <p>We develop a detailed project plan, including timeline, budget, and technical specifications.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Design</h3>
+                        <p>Our designers create wireframes and visual designs that align with your brand and user needs.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Development</h3>
+                        <p>Our development team brings the designs to life with clean, efficient, and scalable code.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Testing</h3>
+                        <p>Rigorous quality assurance to ensure your product works flawlessly across all devices and browsers.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Launch</h3>
+                        <p>We deploy your project and provide training to ensure a smooth transition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About SignaProd</h2>
+                    <p>SignaProd is a full-service digital agency specializing in web development, mobile applications, and digital marketing. Founded in 2020, we've helped businesses of all sizes establish their digital presence and achieve their goals.</p>
+                    <p>Our team of passionate designers, developers, and strategists is dedicated to delivering exceptional digital experiences that drive results. We combine creativity with technical expertise to solve complex problems and create innovative solutions.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Completed Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Team Members</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from businesses we've helped succeed</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"SignaProd transformed our online presence. Their attention to detail and technical expertise resulted in a website that not only looks great but performs exceptionally well."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image"></div>
+                        <div class="author-info">
+                            <h4>John Smith</h4>
+                            <p>CEO, TechInnovate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Working with SignaProd was a game-changer for our e-commerce business. They created a seamless online shopping experience that increased our conversion rate by 35%."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image"></div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Founder, StyleHouse</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Let's discuss your project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>123 Digital Avenue, Tech City, TC 10101</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>info@signaprod.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                        <span class="logo-text">SignaProd</span>
+                    </div>
+                    <p>We help businesses transform their digital presence with cutting-edge websites, apps, and marketing solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile App Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">E-commerce Solutions</a></li>
+                        <li><a href="#">SEO & Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Work</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for the latest updates and insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SignaProd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
