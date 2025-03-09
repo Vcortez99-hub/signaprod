@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
+    <!-- Botão para abrir o menu de contato -->
+    <div class="contact-toggle" onclick="toggleContactMenu()">
+        <i class="fas fa-envelope"></i>
+    </div>
+
     <header>
         <div class="container">
             <nav>
@@ -28,6 +33,17 @@
             </nav>
         </div>
     </header>
+
+    <!-- Menu de contato lateral -->
+    <div class="contact-menu" id="contactMenu">
+        <div class="contact-menu-close" onclick="toggleContactMenu()">&times;</div>
+        <h3>Contato Rápido</h3>
+        <p>info@signaprod.com</p>
+        <p>+55 (11) 1234-5678</p>
+        <a href="#contact">Formulário de Contato</a>
+        <a href="#">FAQ</a>
+    </div>
+
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -36,10 +52,24 @@
                 <a href="#contact" class="cta-button">Solicite uma Consultoria</a>
             </div>
             <div class="hero-image">
-                <!-- SVG existente mantido -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                    <g fill="#40E0D0">
+                        <path d="M100 20c-44.1 0-80 35.9-80 80s35.9 80 80 80 80-35.9 80-80-35.9-80-80-80zm0 150c-38.6 0-70-31.4-70-70s31.4-70 70-70 70 31.4 70 70-31.4 70-70 70z"/>
+                        <path d="M100 40c-33.1 0-60 26.9-60 60s26.9 60 60 60 60-26.9 60-60-26.9-60-60-60zm0 110c-27.6 0-50-22.4-50-50s22.4-50 50-50 50 22.4 50 50-22.4 50-50 50z"/>
+                        <path d="M30 100H170M100 30V170"/>
+                        <path d="M41 60L159 140M41 140L159 60"/>
+                        <rect x="80" y="160" width="40" height="20" rx="5"/>
+                        <rect x="40" y="160" width="20" height="20" rx="5"/>
+                        <rect x="140" y="160" width="20" height="20" rx="5"/>
+                        <path d="M145 140 L150 130 L155 140 L150 145 Z"/>
+                        <path d="M50 45 L55 35 L60 45 L55 50 Z"/>
+                        <path d="M145 60 L150 50 L155 60 L150 65 Z"/>
+                    </g>
+                </svg>
             </div>
         </div>
     </section>
+
     <section id="services" class="services">
         <div class="container">
             <div class="section-title">
@@ -52,7 +82,7 @@
                         <i class="fas fa-rocket"></i>
                     </div>
                     <h3>Desenvolvimento de Produtos</h3>
-                    <p>Criação de soluções tecnológicas inovadoras, desde a concepção até a entrega, utilizando ferramentas e metodologias ágeis para garantir resultados rápidos e eficientes, revisão de portfólio e estratégia de mercado.</p>
+                    <p>Criação de soluções tecnológicas inovadoras, desde a concepção até a entrega, utilizando ferramentas e metodologias ágeis para garantir resultados rápidos e eficientes.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -66,7 +96,7 @@
                         <i class="fas fa-brain"></i>
                     </div>
                     <h3>Transformação Digital com IA</h3>
-                    <p>Implementação de estratégias de transformação digital que integram inteligência artificial para automatizar processos, melhorar a tomada de decisões e criar experiências personalizadas.</p>
+                    <p>Implementação de estratégias de transformação digital que integram inteligência artificial para automatizar processos e melhorar a tomada de decisões.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -78,6 +108,7 @@
             </div>
         </div>
     </section>
+
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-title">
@@ -97,13 +128,7 @@
                             <input type="tel" placeholder="Telefone" required>
                         </div>
                         <div class="form-group">
-                            <select id="productSelect" required>
-                                <option value="">Selecione um serviço</option>
-                                <option value="Desenvolvimento de Produtos">Desenvolvimento de Produtos</option>
-                                <option value="Alocação de Profissionais de TI">Alocação de Profissionais de TI</option>
-                                <option value="Transformação Digital com IA">Transformação Digital com IA</option>
-                                <option value="Criação de Agentes de IA">Criação de Agentes de IA</option>
-                            </select>
+                            <input type="text" id="selectedService" placeholder="Selecione um serviço" readonly onclick="openServicePopup()" required>
                         </div>
                         <div class="form-group">
                             <textarea placeholder="Mensagem" rows="5" required></textarea>
@@ -114,6 +139,18 @@
             </div>
         </div>
     </section>
+
+    <!-- Pop-up de seleção de serviços -->
+    <div class="overlay" id="serviceOverlay" onclick="closeServicePopup()"></div>
+    <div class="service-popup" id="servicePopup">
+        <div class="service-popup-content">
+            <div class="service-option" onclick="selectService('Desenvolvimento de Produtos')">Desenvolvimento de Produtos</div>
+            <div class="service-option" onclick="selectService('Alocação de Profissionais de TI')">Alocação de Profissionais de TI</div>
+            <div class="service-option" onclick="selectService('Transformação Digital com IA')">Transformação Digital com IA</div>
+            <div class="service-option" onclick="selectService('Criação de Agentes de IA')">Criação de Agentes de IA</div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
