@@ -23,6 +23,7 @@
     padding: 80px 20px 20px;
     z-index: 999;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Adicionado para permitir rolagem se o conteúdo for grande */
 }
 
 .contact-menu.active {
@@ -36,22 +37,34 @@
     color: var(--bright-turquoise);
     font-size: 1.5rem;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+    line-height: 1;
 }
 
 .contact-menu h3 {
     color: var(--bright-turquoise);
     margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
 .contact-menu p {
     color: var(--light-text);
     margin-bottom: 15px;
+    line-height: 1.6;
 }
 
 .contact-menu a {
     color: var(--bright-turquoise);
     margin-bottom: 5px;
     display: block;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-menu a:hover {
+    color: var(--light-turquoise);
 }
 
 /* Estilos para o pop-up de serviços */
@@ -77,6 +90,7 @@
 .service-popup-content {
     max-height: 60vh;
     overflow-y: auto;
+    padding-right: 5px; /* Espaço para a barra de rolagem */
 }
 
 .service-option {
@@ -102,7 +116,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 998; /* Alterado para ficar abaixo do menu de contato */
 }
 
 .overlay.active {
@@ -114,10 +128,17 @@
     background-color: var(--dark-teal);
     padding: 40px;
     border-radius: 8px;
+    box-shadow: var(--box-shadow);
 }
 
 .contact-form .form-group {
     margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    color: var(--light-text);
+    margin-bottom: 5px;
 }
 
 .contact-form input,
@@ -126,8 +147,18 @@
     padding: 12px;
     border: 1px solid var(--bright-turquoise);
     border-radius: 4px;
-    background-color: var(--dark-teal);
+    background-color: rgba(255, 255, 255, 0.05);
     color: var(--light-text);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--light-turquoise);
+    box-shadow: 0 0 0 2px rgba(127, 255, 212, 0.2);
 }
 
 .contact-form button {
@@ -136,6 +167,32 @@
     padding: 12px 30px;
     border-radius: 4px;
     width: 100%;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.contact-form button:hover {
+    background-color: var(--light-turquoise);
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact-menu {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .service-popup {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .contact-form {
+        padding: 25px;
+    }
 }
 
 /* Restante do CSS existente continua igual... */
