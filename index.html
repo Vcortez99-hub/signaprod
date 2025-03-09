@@ -1,73 +1,211 @@
-/* Adicione este código ao seu arquivo CSS existente */
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignaProd - Soluções Tecnológicas e Transformação Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!-- Botão para abrir o menu de contato -->
+    <div class="contact-toggle" onclick="toggleContactMenu()">
+        <i class="fas fa-envelope"></i>
+    </div>
 
-/* Estilo para o menu mobile */
-.mobile-menu {
-    display: none;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: var(--dark-teal);
-    z-index: 998;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-    transform: translateY(-100%);
-}
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    <span class="logo-text">SignaProd</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Início</a>
+                    <a href="#services">Serviços</a>
+                    <a href="#contact">Contato</a>
+                </div>
+                <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-.mobile-menu.active {
-    display: block;
-    transform: translateY(0);
-}
+    <!-- Menu mobile (adicionado) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home">Início</a>
+        <a href="#services">Serviços</a>
+        <a href="#contact">Contato</a>
+    </div>
 
-.mobile-menu a {
-    display: block;
-    padding: 15px 20px;
-    color: var(--light-text);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition);
-}
+    <!-- Menu de contato lateral -->
+    <div class="contact-menu" id="contactMenu">
+        <button class="contact-menu-close" onclick="toggleContactMenu()">&times;</button>
+        <h3>Contato Rápido</h3>
+        <p>info@signaprod.com</p>
+        <p>+55 (11) 1234-5678</p>
+        <a href="#contact" onclick="toggleContactMenu()">Formulário de Contato</a>
+        <a href="#">FAQ</a>
+    </div>
 
-.mobile-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--bright-turquoise);
-}
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Inovação Tecnológica e Transformação Digital</h1>
+                <p>Criamos soluções tecnológicas sob medida que impulsionam negócios para o futuro</p>
+                <a href="#contact" class="cta-button">Solicite uma Consultoria</a>
+            </div>
+            <div class="hero-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                    <g fill="#40E0D0">
+                        <path d="M100 20c-44.1 0-80 35.9-80 80s35.9 80 80 80 80-35.9 80-80-35.9-80-80-80zm0 150c-38.6 0-70-31.4-70-70s31.4-70 70-70 70 31.4 70 70-31.4 70-70 70z"/>
+                        <path d="M100 40c-33.1 0-60 26.9-60 60s26.9 60 60 60 60-26.9 60-60-26.9-60-60-60zm0 110c-27.6 0-50-22.4-50-50s22.4-50 50-50 50 22.4 50 50-22.4 50-50 50z"/>
+                        <path d="M30 100H170M100 30V170"/>
+                        <path d="M41 60L159 140M41 140L159 60"/>
+                        <rect x="80" y="160" width="40" height="20" rx="5"/>
+                        <rect x="40" y="160" width="20" height="20" rx="5"/>
+                        <rect x="140" y="160" width="20" height="20" rx="5"/>
+                        <path d="M145 140 L150 130 L155 140 L150 145 Z"/>
+                        <path d="M50 45 L55 35 L60 45 L55 50 Z"/>
+                        <path d="M145 60 L150 50 L155 60 L150 65 Z"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </section>
 
-/* Estilo para o botão de toggle do contato */
-.contact-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--bright-turquoise);
-    color: var(--dark-teal);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
-    z-index: 997;
-    transition: var(--transition);
-}
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Soluções estratégicas para impulsionar sua transformação digital</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Desenvolvimento de Produtos</h3>
+                    <p>Criação de soluções tecnológicas inovadoras, desde a concepção até a entrega, utilizando ferramentas e metodologias ágeis para garantir resultados rápidos e eficientes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Alocação de Profissionais de TI</h3>
+                    <p>Identificação e alocação dos melhores talentos em tecnologia, garantindo que sua equipe tenha as habilidades necessárias para enfrentar os desafios do mercado atual.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Transformação Digital com IA</h3>
+                    <p>Implementação de estratégias de transformação digital que integram inteligência artificial para automatizar processos e melhorar a tomada de decisões.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Criação de Agentes de IA</h3>
+                    <p>Otimização de fluxos de trabalho e processos com agentes de IA personalizados, desenvolvidos especificamente para as necessidades da sua empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.contact-toggle:hover {
-    background-color: var(--light-turquoise);
-    transform: scale(1.1);
-}
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contate-nos</h2>
+                <p>Preencha o formulário para solicitar um serviço</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" placeholder="Nome Completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" placeholder="Telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="selectedService">Serviço</label>
+                            <input type="text" id="selectedService" placeholder="Selecione um serviço" readonly onclick="openServicePopup()" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" placeholder="Mensagem" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Solicitação</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* Ajustes de responsividade para o header */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-        cursor: pointer;
-        font-size: 1.5rem;
-        color: var(--dark-teal);
-    }
-}
+    <!-- Pop-up de seleção de serviços -->
+    <div class="overlay" id="serviceOverlay" onclick="closeServicePopup()"></div>
+    <div class="service-popup" id="servicePopup">
+        <div class="service-popup-content">
+            <div class="service-option" onclick="selectService('Desenvolvimento de Produtos')">Desenvolvimento de Produtos</div>
+            <div class="service-option" onclick="selectService('Alocação de Profissionais de TI')">Alocação de Profissionais de TI</div>
+            <div class="service-option" onclick="selectService('Transformação Digital com IA')">Transformação Digital com IA</div>
+            <div class="service-option" onclick="selectService('Criação de Agentes de IA')">Criação de Agentes de IA</div>
+        </div>
+    </div>
+
+    <script>
+        // Função para abrir/fechar o menu de contato
+        function toggleContactMenu() {
+            const menu = document.getElementById('contactMenu');
+            const overlay = document.getElementById('serviceOverlay');
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                overlay.classList.add('active');
+            } else {
+                overlay.classList.remove('active');
+            }
+        }
+
+        // Função para abrir o menu mobile
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Função para abrir o popup de serviços
+        function openServicePopup() {
+            document.getElementById('servicePopup').classList.add('active');
+            document.getElementById('serviceOverlay').classList.add('active');
+        }
+
+        // Função para fechar o popup de serviços
+        function closeServicePopup() {
+            document.getElementById('servicePopup').classList.remove('active');
+            document.getElementById('serviceOverlay').classList.remove('active');
+        }
+
+        // Função para selecionar um serviço
+        function selectService(service) {
+            document.getElementById('selectedService').value = service;
+            closeServicePopup();
+        }
+
+        // Prevenção de envio do formulário para demonstração
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Formulário enviado com sucesso!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
