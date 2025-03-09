@@ -1,10 +1,7 @@
-// Menu de Contato Lateral
 function toggleContactMenu() {
-    const menu = document.getElementById('contactMenu');
-    menu.classList.toggle('active');
+    document.getElementById('contactMenu').classList.toggle('active');
 }
 
-// Pop-up de Seleção de Serviços
 function openServicePopup() {
     document.getElementById('servicePopup').classList.add('active');
     document.getElementById('serviceOverlay').classList.add('active');
@@ -20,7 +17,7 @@ function selectService(service) {
     closeServicePopup();
 }
 
-// Mobile Menu
+// Mobile menu
 document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
     document.querySelector('.nav-links').classList.toggle('active');
 });
