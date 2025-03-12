@@ -144,26 +144,26 @@
             </div>
             <div class="contact-content">
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formspree.io/f/mpwpzbqw" method="POST">
                         <div class="form-group">
                             <label for="name">Nome Completo</label>
-                            <input type="text" id="name" placeholder="Nome Completo" required>
+                            <input type="text" id="name" name="name" placeholder="Nome Completo" required>
                         </div>
                         <div class="form-group">
                             <label for="email">E-mail</label>
-                            <input type="email" id="email" placeholder="E-mail" required>
+                            <input type="email" id="email" name="email" placeholder="E-mail" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" placeholder="Telefone" required>
+                            <input type="tel" id="phone" name="phone" placeholder="Telefone" required>
                         </div>
                         <div class="form-group">
                             <label for="selectedService">Serviço</label>
-                            <input type="text" id="selectedService" placeholder="Selecione um serviço" readonly onclick="openServicePopup()" required>
+                            <input type="text" id="selectedService" name="service" placeholder="Selecione um serviço" readonly onclick="openServicePopup()" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea id="message" placeholder="Mensagem" rows="5" required></textarea>
+                            <textarea id="message" name="message" placeholder="Mensagem" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Enviar Solicitação</button>
                     </form>
@@ -220,11 +220,12 @@
             closeServicePopup();
         }
 
-        // Prevenção de envio do formulário para demonstração
+        // Evento de envio do formulário modificado para o Formspree
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Formulário enviado com sucesso!');
-            this.reset();
+            // Permitir que o formulário seja enviado (não previne o envio)
+            setTimeout(function() {
+                alert('Formulário enviado com sucesso!');
+            }, 300);
         });
     </script>
 </body>
