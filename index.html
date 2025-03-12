@@ -220,12 +220,36 @@
             closeServicePopup();
         }
 
-        // Evento de envio do formulário modificado para o Formspree
+        // Evento de envio do formulário com confirmação e redirecionamento
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            // Permitir que o formulário seja enviado (não previne o envio)
-            setTimeout(function() {
-                alert('Formulário enviado com sucesso!');
-            }, 300);
+            // Prevenir o envio padrão para ter controle sobre o processo
+            e.preventDefault();
+            
+            // Capturar o formulário para envio via AJAX
+            const form = this;
+            const formData = new FormData(form);
+            
+            // Enviar os dados para o Formspree
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Mostrar alerta e redirecionar quando o usuário clicar em OK
+                    alert('Formulário enviado com sucesso!');
+                    window.location.href = '#home'; // Redirecionar para a seção inicial
+                    form.reset(); // Limpar o formulário
+                } else {
+                    throw new Error('Ocorreu um erro ao enviar o formulário.');
+                }
+            })
+            .catch(error => {
+                alert('Erro ao enviar o formulário: ' + error.message);
+            });
         });
     </script>
 </body>
