@@ -1,3 +1,16 @@
+/* Definição de variáveis CSS */
+:root {
+    --dark-teal: #008080;
+    --medium-teal: #20B2AA;
+    --bright-turquoise: #40E0D0;
+    --light-turquoise: #AFEEEE;
+    --white: #FFFFFF;
+    --grey-bg: #F5F7FA;
+    --dark-text: #333333;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
 /* Reset básico */
 * {
     margin: 0;
@@ -74,6 +87,39 @@ header nav {
 
 .mobile-menu-btn {
     display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--dark-teal);
+}
+
+/* Menu Mobile */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    z-index: 99;
+    flex-direction: column;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-menu a {
+    color: var(--dark-teal);
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: 500;
+    border-bottom: 1px solid var(--light-turquoise);
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none;
 }
 
 /* Estilos para a seção hero */
@@ -210,6 +256,188 @@ header nav {
     margin: 0 auto;
 }
 
+/* Estilos para o formulário de contato */
+.contact-form {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--dark-teal);
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--bright-turquoise);
+    box-shadow: 0 0 0 2px rgba(64, 224, 208, 0.2);
+}
+
+.submit-btn {
+    background-color: var(--bright-turquoise);
+    color: var(--dark-teal);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--light-turquoise);
+}
+
+/* Estilos para o botão de contato flutuante */
+.contact-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--bright-turquoise);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-teal);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    z-index: 99;
+    transition: var(--transition);
+}
+
+.contact-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para o menu de contato lateral */
+.contact-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: var(--white);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    z-index: 999;
+    transition: var(--transition);
+}
+
+.contact-menu.active {
+    right: 0;
+}
+
+.contact-menu-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--dark-teal);
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.contact-menu h3 {
+    color: var(--dark-teal);
+    margin-bottom: 20px;
+}
+
+.contact-menu p {
+    margin-bottom: 10px;
+    color: var(--medium-teal);
+}
+
+.contact-menu a {
+    display: block;
+    color: var(--dark-teal);
+    text-decoration: none;
+    margin-top: 15px;
+    transition: var(--transition);
+}
+
+.contact-menu a:hover {
+    color: var(--bright-turquoise);
+}
+
+/* Overlay para popups */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Popup de seleção de serviços */
+.service-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background-color: var(--white);
+    border-radius: 8px;
+    z-index: 999;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.service-popup.active {
+    display: block;
+}
+
+.service-popup-content {
+    padding: 20px;
+}
+
+.service-option {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.service-option:last-child {
+    border-bottom: none;
+}
+
+.service-option:hover {
+    background-color: var(--light-turquoise);
+}
+
 /* Ajustes de responsividade */
 @media (max-width: 992px) {
     .hero .container {
@@ -232,11 +460,23 @@ header nav {
 }
 
 @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
     .hero-content h1 {
         font-size: 2rem;
     }
     
     .section-title h2 {
         font-size: 1.8rem;
+    }
+    
+    .contact-menu {
+        width: 280px;
     }
 }
